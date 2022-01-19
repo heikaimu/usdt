@@ -1,29 +1,57 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+/*
+ * @Description:
+ * @Version: 2.0
+ * @Autor: Yaowen Liu
+ * @Date: 2021-04-27 17:00:12
+ * @LastEditors: Yaowen Liu
+ */
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: '/login'
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/login',
+    name: 'Login',
+    component: () => import('views/page-login/PageLogin'),
+    meta: {
+      title: '登陆'
+    }
+  },
+  {
+    path: '/main',
+    name: 'Main',
+    component: () => import('views/layout/Layout'),
+    children: [
+      {
+        path: '/',
+        redirect: 'pageExample'
+      },
+      {
+        path: 'pageExample',
+        name: 'pageExample',
+        component: () => import('views/page-example/PageExample'),
+        meta: {
+          title: '页面模板'
+        }
+      }
+    ]
   }
-]
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+router.beforeEach((to, from, next) => {
+  next();
+});
+
+export default router;
