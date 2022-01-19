@@ -1,0 +1,19 @@
+/* 改变主题色变量 */
+$--color-primary: #36A2EA !default;
+/// color|1|Functional Color|1
+$--color-success: #26A149 !default;
+/// color|1|Functional Color|1
+$--color-warning: #F7B217 !default;
+/// color|1|Functional Color|1
+$--color-danger: #ED158E !default;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+@import "./components/el-button.scss";
+@import "./components/el-input.scss";
+@import "./components/el-upload.scss";
+@import "./components/el-progress.scss";
+@import "./components/el-tag.scss";
+@import "./components/el-notification.scss";

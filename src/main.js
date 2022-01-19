@@ -12,10 +12,11 @@ import router from './router';
 import store from './store';
 import '@/common/style/index.scss';
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import '@/common/style/element-variables.scss';
 import EventBus from './common/lib/bus';
 import VueLazyload from 'vue-lazyload';
 import components from '@/components';
+import relUI from '@/rel-ui';
 
 const LOADING_IMG = require('@/assets/loading_w.jpg');
 const ERROR_IMG = require('@/assets/image_error.jpg');
@@ -29,6 +30,7 @@ Vue.use(VueLazyload, {
 Vue.use(ElementUI);
 Vue.use(EventBus);
 Vue.use(components);
+Vue.use(relUI);
 
 Vue.prototype.$EventBus = EventBus;
 

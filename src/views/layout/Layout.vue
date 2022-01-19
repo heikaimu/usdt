@@ -37,7 +37,7 @@ export default {
   }
   .content-container {
     flex: 1;
-    background: #cccccc;
+    background: #ffffff;
   }
 }
 </style>

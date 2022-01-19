@@ -1,0 +1,8 @@
+@import "./variables.scss";
+
+.divider-line {
+  display: block;
+  width: 55px;
+  height: 3px;
+  background-color: $theme-color;
+}

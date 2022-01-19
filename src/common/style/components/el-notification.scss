@@ -1,0 +1,48 @@
+.el-notification {
+  border-radius: 10px;
+  padding-left: 30px;
+  &.right {
+    border-radius: 0 10px 10px 0;
+  }
+  .el-notification__icon {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    &.el-icon-success {
+      &::after {
+        background-color: #e6ffec;
+        border-left: 6px solid $--color-success;
+      }
+    }
+    &.el-icon-warning {
+      &::after {
+        background-color: #fff7e2;
+        border-left: 6px solid $--color-warning;
+      }
+    }
+    &.el-icon-error {
+      &::after {
+        background-color: #ffe6f4;
+        border-left: 6px solid $--color-danger;
+      }
+    }
+    &.el-icon-info {
+      color: $--color-primary;
+      &::after {
+        background-color: #ebf7ff;
+        border-left: 6px solid $--color-primary;
+      }
+    }
+  }
+  .el-notification__closeBtn {
+    top: 10px;
+    color: #210023;
+  }
+}

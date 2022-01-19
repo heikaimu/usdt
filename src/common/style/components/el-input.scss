@@ -1,0 +1,35 @@
+.el-input__inner {
+  border-radius: 10px;
+  border: 1px solid #959595;
+}
+.el-select-dropdown {
+  border-radius: 10px;
+}
+.el-input__prefix {
+  .el-input__icon {
+    color: #6a6a6a;
+  }
+}
+.el-input-number {
+  .el-input__inner {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0px 3px 6px #00000029;
+  }
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    top: 0;
+    bottom: 0;
+    background-color: #bababa;
+    border-radius: 0;
+    i {
+      color: #6a6a6a;
+    }
+  }
+  .el-input-number__decrease {
+    left: 0;
+  }
+  .el-input-number__increase {
+    right: 0;
+  }
+}
